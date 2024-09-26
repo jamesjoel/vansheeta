@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Casual Tee",
+    "price": 15.99,
+    "category": "T-Shirts",
+    "detail": "Soft cotton tee."
+  },
+  {
+    "title": "Denim Jacket",
+    "price": 49.99,
+    "category": "Jackets",
+    "detail": "Classic denim style."
+  },
+  {
+    "title": "Chinos",
+    "price": 39.99,
+    "category": "Pants",
+    "detail": "Slim-fit chinos."
+  },
+  {
+    "title": "Floral Dress",
+    "price": 25.99,
+    "category": "Dresses",
+    "detail": "Light floral print."
+  },
+  {
+    "title": "Sneakers",
+    "price": 59.99,
+    "category": "Footwear",
+    "detail": "Comfy casual shoes."
+  }
+]
