@@ -1,6 +1,17 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import ProductBox from '../../components/ProductBox/ProductBox'
+import axios from 'axios'
 
 const Home = () => {
+
+  let [pro, setPro] = useState([]);
+  useEffect(()=>{
+    axios.get("http://localhost:3000/api/v1/product")
+    .then(response=>{
+      setPro(response.data);
+    })
+  },[])
+
   return (
     <>
     <div className="container">
@@ -28,16 +39,10 @@ const Home = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col-md-3">
-          <div className="card m-3 border-0">
-            <img className="card-img-top" src="assets/images/bb5c338b-f2c4-4c32-acc4-a5918c8e6ad41568109371315-Gap-Mens-Logo-Hoodie-Sweatshirt-6931568109369450-1 1.png" alt="Card image" />
-            <div className="card-body">
-              <h6 className="card-title">GAP</h6>
-              <p className="card-text mb-0">Mens T-Shirt</p>
-              <p><strong>$599</strong> <del>$1200</del> <small className="text-danger">(50% OFF)</small></p>
-            </div>
-          </div>
-        </div>
+        {
+          pro.map(item=><ProductBox cardInfo={item} key={item._id} />)
+        }
+        
         
         
       </div>
